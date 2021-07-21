@@ -6,6 +6,8 @@
     <style>
         body {
             width: 300px;
+            background: black;
+            color: white;
         }
         h2,label,button {
             margin: auto 0;
@@ -17,11 +19,17 @@
         }
         textarea{
             resize:none;
+            background: black;
+            color: white;
+        }
+        #copy {
+            background: black;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h2>get Title＆URL of ALLTabs</h2>
+    <h2>現在開いてるタブの一覧を取得</h2>
     <div>
         <label>現在のウインドウのタブ数：</label>
         <a id="numOfTabs" type="number"></a>
