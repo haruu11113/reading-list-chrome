@@ -1,5 +1,5 @@
 {
-  "name": "get Title&URL of ALLTabs",
+  "name": "get ALl tab list",
   "author": "yukuduri",
   "version": "1.0.0",
   "description": "開いているウインドウ内のすべてのタブのタイトルとURLを取得します。",
