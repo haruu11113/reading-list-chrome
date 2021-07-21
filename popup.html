@@ -1,13 +1,34 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <script src="getTitleAndURL.js"></script>
-  </head>
-  <body>
+    <style>
+        body {
+            width: 300px;
+        }
+        h2,label,button {
+            margin: auto 0;
+            width: 100%;
+        }
+        .width-fit {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
     <h2>get Title＆URL of ALLTabs</h2>
-    <label>現在のウインドウのタブ数：<input id="numOfTabs" type="number" readonly></label><br><br>
-    <label>取得したタイトルとURL：<textarea id="txt"></textarea></label><br>
+    <div>
+        <label>現在のウインドウのタブ数：</label>
+        <a id="numOfTabs" type="number"></a>
+    </div>
+    <div>
+        <label>取得したタイトルとURL：</label>
+        <div>
+            <textarea class="width-fit"id="txt"></textarea>
+        </div>
+    </div>
     <button id="copy">copy</button>
-  </body>
+</body>
 </html>
