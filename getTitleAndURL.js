@@ -11,10 +11,11 @@ const run = () => {
   //現在のウインドウのタブをすべて取得
   chrome.tabs.query({windowId: chrome.windows.WINDOW_ID_CURRENT},(tabs) => {
     let txt = '';
-    const delimiter = '\n';  //区切り文字
-    const template = '[%%title%%](%%URL%% \"%%title%%\")'; //テンプレ
+    const delimiter = ', ';  //区切り文字
+    // const template = '[%%title%%](%%URL%% \"%%title%%\")'; //テンプレ
+    const template = '%%URL%% '; //テンプレ
 
-    document.querySelector('#numOfTabs').value = tabs.length;
+    document.querySelector('#numOfTabs').innerHTML = tabs.length;
 
     tabs.forEach((tab,i) => {
       if(i!=0) txt += delimiter;  //最初は区切り文字不要
@@ -28,7 +29,7 @@ const run = () => {
 }
 
 const copy = () => {
-  constcopyText = document.querySelector('#txt');
+  const copyText = document.querySelector('#txt');
   copyText.select();
   document.execCommand('copy');
 }
