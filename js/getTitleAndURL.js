@@ -11,9 +11,9 @@ const run = () => {
   //現在のウインドウのタブをすべて取得
   chrome.tabs.query({windowId: chrome.windows.WINDOW_ID_CURRENT},(tabs) => {
     let txt = '';
-    const delimiter = ', ';  //区切り文字
+    const delimiter = ', \n';  //区切り文字
     // const template = '[%%title%%](%%URL%% \"%%title%%\")'; //テンプレ
-    const template = '%%URL%% '; //テンプレ
+    const template = '{url:"%%URL%%", title:"%%title%%"}'; //テンプレ
 
     document.querySelector('#numOfTabs').innerHTML = tabs.length;
 
@@ -24,6 +24,8 @@ const run = () => {
     });
 
     document.querySelector('#txt').value = txt;
+    document.querySelector('#txtdiv').innerHTML = txt;
+    connsole.log(txt);
 
   });
 }
