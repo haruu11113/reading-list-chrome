@@ -1,16 +1,19 @@
 {
-  "name": "get ALl tab list",
-  "author": "yukuduri",
-  "version": "1.0.0",
-  "description": "開いているウインドウ内のすべてのタブのタイトルとURLを取得します。",
-  "browser_action":{
-    "default_title": "get Title&URL of ALLTabs",
-    "default_popup": "popup.html"
-  },
-  "permissions": [
-    "activeTab",
-    "tabs",
-    "clipboardWrite"
-  ],
-  "manifest_version": 2
+    "name": "get ALl tab list",
+    "author": "haruu11113",
+    "version": "0.1.0",
+    "description": "開いているウインドウ内のすべてのタブのタイトルとURLを取得します。",
+    "browser_action":{
+        "default_title": "get ALl tab list",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "clipboardWrite"
+    ],
+    "chrome_url_overrides" : {
+        "getalltabs": "index.html"
+    },
+    "manifest_version": 2
 }
